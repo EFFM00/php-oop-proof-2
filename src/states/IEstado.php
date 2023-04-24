@@ -9,9 +9,9 @@ use Elena\PhpOopProof2\models\Producto;
 
 interface IEstado {
 
-    public function agregarProducto(Producto $producto);
+    public function agregarProducto(Producto $producto): void;
     
-    public function sacarProducto(Producto $producto);
+    public function sacarProducto(Producto $producto): void;
 
     public function contarCantidadProductos(): int;
 
@@ -21,6 +21,6 @@ interface IEstado {
 
     public function verificarPesoPermitido(): bool;
 
-    public function setVariable($name, $var);
+    public function setCarrito(Carrito $carrito): void;
 
 }
