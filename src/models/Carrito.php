@@ -2,12 +2,13 @@
 
 namespace Elena\PhpOopProof2\models;
 
-use Elena\PhpOopProof2\models\Estado;
+namespace Elena\PhpOopProof2\states\IEstado;
 
 
 class Carrito {
 
-    private Estado $estado;
+    private IEstado $estado;
 
+    
 
 }
