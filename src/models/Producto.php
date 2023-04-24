@@ -18,7 +18,7 @@ class Producto {
 
         $this->nombre = $nombre;
         $this->precio = $precio;
-        $this->peso = $nombre;
+        $this->peso = $peso;
 
     }
 
