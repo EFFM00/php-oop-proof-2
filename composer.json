@@ -1,0 +1,17 @@
+{
+    "name": "elena/php-oop-proof-2",
+    "autoload": {
+        "psr-4": {
+            "Elena\\PhpOopProof2\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "EFFM00",
+            "email": "fischietto.elena@gmail.com"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": "^10.1"
+    }
+}
