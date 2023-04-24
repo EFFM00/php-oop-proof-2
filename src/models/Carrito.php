@@ -8,6 +8,6 @@ use Elena\PhpOopProof2\models\Estado;
 class Carrito {
 
     private Estado $estado;
-    
+
 
 }

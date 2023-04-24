@@ -3,6 +3,7 @@
 require 'vendor/autoload.php';
 
 use Elena\PhpOopProof2\models\Producto;
+use Elena\PhpOopProof2\models\Carrito;
 
 
 $x = new Producto("x", 223.45, 3.1);
