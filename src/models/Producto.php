@@ -67,7 +67,7 @@ class Producto {
     }
 
 
-    
+
     /**
      * Get the value of nombre
      */ 
@@ -87,4 +87,9 @@ class Producto {
 
         return $this;
     }
+
+
+    public function toString() {
+        return "Nombre: " . $this->nombre . ", Precio: " . $this->precio . ", Peso: " . $this->peso;
+      }
 }
