@@ -36,10 +36,8 @@ class Vacio implements IEstado{
     
 
 
-    // PASAR A OTRA CLASE
-
     public function sacarProducto(Producto $producto){
-
+        return null;
     }
 
 
@@ -63,7 +61,7 @@ class Vacio implements IEstado{
 
 
     public function verificarPesoPermitido():bool {
-
+        return null;
     }
     
 

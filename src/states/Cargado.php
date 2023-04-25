@@ -35,7 +35,7 @@ class Cargado implements IEstado{
     }
     
     public function sacarProducto(Producto $producto){
-        if(count($producto) > 0) {
+        if(count($productos) > 0) {
             unset($productos[$producto]);
         } else {
             throw new Exception("Solo se pueden agregar productos x, y o z");
@@ -48,23 +48,64 @@ class Cargado implements IEstado{
 
     public function contarCantidadProductos():int {
 
+        return count($this->productos);
+
     }
+
 
     public function subtotalPorProducto(Producto $producto): float {
 
+        $cantProd = 0;
+
+        foreach ($this->productos as $prod) {
+            if($producto["nombre"] === $prod["nombre"]) {
+                $cantProd ++;
+            }
+        }
+
+        $subtotal = $cantProd * $producto["precio"];
+
+        return $subtotal;
+
     }
+
+
 
     public function montoTotal():float {
 
+        $arrTiposProd = array_unique($this->productos);
+
+        $totalProd = 0;
+
+        foreach ($arrTiposProd as $product) {
+            $totalProd += $this->subtotalPorProducto($product);
+        }
+
+        $total = $totalProd;
+
+        return $total;
     }
+
 
     public function verificarPesoPermitido():bool {
+        
+        $pesoAct = 0;
 
+        foreach ($productos as $prod) {
+            $pesoAct += $prod["peso"];
+        }
+
+        if($pesoAct < 5) {
+            return true;
+        } else {
+            throw new Exception("El paquete debe pesar menos de 5 Kg.");
+        }
     }
+
 
     public function setCarrito(Carrito $carrito):void {
         $this->carrito = $carrito;  
-      }
+    }
 
 
       public function __construct(array $productos, float $peso, float $precio) {
