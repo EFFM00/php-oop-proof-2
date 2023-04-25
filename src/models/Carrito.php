@@ -10,7 +10,7 @@ class Carrito {
     private IEstado $estado;
 
     public function __construct() {
-        setEstado(new Vacio());
+        setCarrito(new Vacio(this));
     }
 
 
