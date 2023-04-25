@@ -96,6 +96,9 @@ class Cargado implements IEstado{
         }
 
         if($pesoAct < 5) {
+
+            $carrito->setEstado(new Enviado($this->productos, $this->peso, $this->precio));
+
             return true;
         } else {
             throw new Exception("El paquete debe pesar menos de 5 Kg.");
